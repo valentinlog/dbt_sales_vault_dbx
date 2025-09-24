@@ -58,3 +58,7 @@ models:
     util:
       +schema: util
       +materialized: table
+  
+    facts:
+      +schema: fact
+      +materialized: table
