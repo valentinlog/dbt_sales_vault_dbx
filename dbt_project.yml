@@ -28,14 +28,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
-vars:                  # 👈 put project-wide variables here
+vars:                  #  put project-wide variables here
   hash: MD5  
 flags:
   use_materialization_v2: true
 seeds:
   dbt_sales_vault_dbx:
     # Config indicated by + and applies to all files under seeds/example/
-    +schema: raw        # 👈 seeds always go into the raw schema
+    +schema: raw        #  seeds always go into the raw schema
     +quote_columns: false
 models:
   dbt_sales_vault_dbx:
