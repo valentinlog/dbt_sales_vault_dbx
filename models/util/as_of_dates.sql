@@ -7,7 +7,7 @@ with calendar as (
 
     select
         sequence(
-            to_date('2020-01-01'),          -- 📌 start date (adjust for your business)
+            to_date('1980-01-01'),          -- 📌 start date (adjust for your business)
             current_date,
             interval 1 day
         ) as date_array

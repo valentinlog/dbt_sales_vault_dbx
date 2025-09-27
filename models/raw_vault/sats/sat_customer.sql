@@ -1,9 +1,9 @@
 {{ config(materialized='incremental') }}
 
-{%- set source_model = "stage_customer" -%}
+{%- set source_model = "stage_customers" -%}
 {%- set src_pk = "hub_customer_hk" -%}
 {%- set src_hashdiff = "hash_diff" -%}
-{%- set src_payload = ["name","address","phone","account_balance","marketing_segment","comment"] -%}
+{%- set src_payload = ["name","email","country"] -%}
 {%- set src_eff = "load_dts" -%}
 {%- set src_ldts = "load_dts" -%}
 {%- set src_source = "record_source" -%}

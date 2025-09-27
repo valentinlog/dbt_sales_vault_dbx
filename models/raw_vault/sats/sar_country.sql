@@ -1,9 +1,9 @@
 {{ config(materialized='incremental') }}
 
-{%- set source_model = "stage_country" -%}
+{%- set source_model = "stage_customers" -%}
 {%- set src_pk = "hub_country_hk" -%}
 {%- set src_hashdiff = "hash_diff" -%}
-{%- set src_payload = ["name"] -%}
+{%- set src_payload = ["country"] -%}
 {%- set src_eff = "load_dts" -%}
 {%- set src_ldts = "load_dts" -%}
 {%- set src_source = "record_source" -%}

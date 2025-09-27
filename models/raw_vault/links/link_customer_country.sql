@@ -1,6 +1,6 @@
 {{ config(materialized='incremental') }}
 
-{%- set source_model = "stage_customer" -%}
+{%- set source_model = "stage_customers" -%}
 {%- set src_pk = "link_customer_country_hk" -%}
 {%- set src_fk = ["hub_customer_hk", "hub_country_hk"] -%}
 {%- set src_ldts = "load_dts" -%}

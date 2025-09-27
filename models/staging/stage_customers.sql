@@ -1,18 +1,18 @@
 {%- set yaml_metadata -%}
-source_model: 'orders'
+source_model: 'customers'
 derived_columns:
-  record_source: '!seed_orders'
+  record_source: '!seed_customers'
   load_dts: current_timestamp()
 hashed_columns:
-  hub_order_hk: 'id'
   hub_customer_hk: 'id'
-  link_customer_order_hk: 
+  hub_country_hk: 'country'
+  link_country_customer_hk:
     - 'id'
-    - 'customer_id'
+    - 'country'
   hash_diff:
-    - 'order_date'
-    - 'total_amount'
-    - 'status'
+    - 'name'
+    - 'email'
+    - 'country'
 {%- endset -%}
 {% set metadata_dict = fromyaml(yaml_metadata) %}
 {% set source_model = metadata_dict['source_model'] %}

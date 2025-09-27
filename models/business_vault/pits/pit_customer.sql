@@ -10,7 +10,7 @@ satellites:
     ldts:
       load_ts: load_dts
 stage_tables_ldts: 
-  stage_customer: load_dts
+  stage_customers: load_dts
 src_ldts: load_dts
 {%- endset -%}
 
